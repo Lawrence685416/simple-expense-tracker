@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #fbf9f5;
+  font-family: "Roboto", sans-serif;
+  background: #fbf9f5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 41px,
+    #e4dfd3 41px,
+    #e4dfd3 42px
+  );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,17 +21,20 @@ body {
 }
 
 .container {
-  width: fit-content;
-  max-width: 90%;
+  /* width: fit-content; */
+  /* max-width: 90%; */
+  width: 90%;
+  max-width: 500px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   border-radius: 15px;
   padding: 1rem;
-  border: 1px red solid;
 }
 
 .input-field {
+  width: 100%;
   display: flex;
   background-color: #fff;
   padding: 20px;
@@ -31,6 +43,7 @@ body {
   gap: 0.5rem;
 }
 .input-field > input {
+  width: 100%;
   padding: 12px;
   border: 2px #eee solid;
   border-radius: 5px;
@@ -43,6 +56,33 @@ body {
   background-color: #000;
   cursor: pointer;
 }
-#amount {
-  width: 100px;
+
+.sub-entry {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sep {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.entries > p {
+  font-size: 1.5rem;
+  color: #c0bdbd;
+}
+#amount{
+    width: 80px;
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result>h5{
+    color: brown;
+    font-size: 1.5rem;
+}
+#del{
+    color: #0b0b0b;
 }
