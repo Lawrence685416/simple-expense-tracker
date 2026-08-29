@@ -1,14 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense-Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    Hello World
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ledger</h1>
+      <div class="input-field">
+        <input type="text" placeholder="Cofee, taxi, rent..." />
+        <input type="number" placeholder="0.00" id="amount" />
+        <button>Add</button>
+      </div>
+      <div class="entries">
+        <h1>Entries</h1>
+        <div class="sub-entry">
+          <p>Coffee</p>
+          <div class="sep">
+            <h6>Amount</h6>
+            <p>Delete</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="result">
+        <h1>Total Spent</h1>
+        <p>$16.50</p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
