@@ -4,10 +4,14 @@ let expenseAmount = document.querySelector("#amount");
 let expenseList = document.querySelector(".entries");
 let total = document.querySelector("#total");
 let addExpense = document.querySelector(".add-button");
+let totalAmount = 0;
 
 addExpense.addEventListener("click", function () {
   let name = expenseName.value;
-  let amount = expenseAmount.value;
+  let amount = Number(expenseAmount.value);
+
+  totalAmount = totalAmount + amount;
+  total.innerHTML = totalAmount;
 
  expenseList.innerHTML += `
         <div class="sub-entry">
