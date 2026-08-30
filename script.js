@@ -27,3 +27,21 @@ addExpense.addEventListener("click", function () {
         </div>
     `;
 });
+
+expenseList.addEventListener("click", function (event) {
+
+    let deleteButton = event.target.closest(".delete-btn");
+
+    if (deleteButton) {
+        let amountText = deleteButton.parentElement.querySelector("p").textContent;
+
+        let amount = Number(amountText.replace("$", ""));
+
+        totalAmount -= amount;
+
+        total.innerHTML = totalAmount;
+
+        deleteButton.parentElement.parentElement.remove();
+    }
+
+});
